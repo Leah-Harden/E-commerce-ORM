@@ -12,12 +12,12 @@ Product.init(
     type: DataTypes.INTEGER,
     allowNull: false,
     autoIncrement: true,
+    primaryKey: true
 
   },
   price: {
     type: DataTypes.DECIMAL,
     allowNull: false,
-    autoIncrement: true,
     validate: {
       isDecimal: true
     }
