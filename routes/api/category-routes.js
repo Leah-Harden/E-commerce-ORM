@@ -9,6 +9,9 @@ router.get('/', (req, res) => {
   Category.findAll()
   .then((catData) =>
   res.json(catData))
+    Product.findAll()
+  .then((proData) =>
+  res.json(proData))
   // be sure to include its associated Products
 });
 
