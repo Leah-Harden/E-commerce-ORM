@@ -6,12 +6,11 @@ const { destroy } = require('../../models/Product');
 
 router.get('/', (req, res) => {
   // find all categories
-  Category.findAll()
-  .then((catData) =>
-  res.json(catData))
-    Product.findAll()
-  .then((proData) =>
-  res.json(proData))
+  Category.findAll({
+    include: [Product],
+  })
+    .then((categories) => res.json(categories))
+    .catch((err) => res.status(500).json(err));
   // be sure to include its associated Products
 });
 
