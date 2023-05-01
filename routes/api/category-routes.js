@@ -48,12 +48,11 @@ router.put('/:id', (req, res) => {
     where:{
       id: req.params.id
     }
-  }
+  })
   .then((updatedBook) => {
       res.json(updatedBook)
   })
   .catch((err) => res.json(err))
-  )
 });
 
 router.delete('/:id', (req, res) => {
