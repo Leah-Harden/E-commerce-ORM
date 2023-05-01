@@ -15,10 +15,8 @@ This a program that allow you to track products and organize them. You can put t
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+
+You will need to npm i to get the dependencies then have something like Insomnia to interact with the routes.
 
 
 ## Authors
